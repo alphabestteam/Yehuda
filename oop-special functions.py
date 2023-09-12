@@ -5,7 +5,7 @@ from Point import Point
 # 3. the same he compere the 0xsjdfkdsf and not the string 
 # 4. you can use + in int and in str how ?  because you overloaded by int class and str 
 # 5.
-def without_magic_functions():
+def with_magic_functions():
     p1 = Point(5,6)
     p2 = Point(5,6)
     
@@ -16,7 +16,5 @@ def without_magic_functions():
 #the output is False and Point.Point object at 0x00000227029A4FD0> <Point.Point object at 0x00000227029A4F70>
 # and error because cant + two Point
 
- 
-
 if __name__=="__main__":
-    without_magic_functions()
+    with_magic_functions()
