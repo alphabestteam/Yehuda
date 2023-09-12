@@ -8,7 +8,7 @@ class Costumer:
 
     @property
     def name_clint(self):
-        return self.name_clint
+        return self._name_clint
     
     @name_clint.setter  
     def name_clint(self, x:str):

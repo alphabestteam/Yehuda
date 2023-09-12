@@ -23,7 +23,7 @@ class Register:
     
     def checkout_customer(self,new_cost:Costumer):
         self.profit_amount+=new_cost.receipt
-        self.total_sales.append(new_cost.shopping_list)
+        self.total_sales.append(new_cost.name_clint)
     
     def print_summary(self):
         print(self.profit_amount)

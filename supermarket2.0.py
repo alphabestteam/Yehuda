@@ -1,3 +1,4 @@
+import json
 from Product import Product
 from Costumer import Costumer
 from register import Register
@@ -16,7 +17,13 @@ c.Remove_product(p)
 
 r.checkout_customer(c)
 r.print_summary()
-
-print(c.shopping_list)
+print((c.shopping_list))
 print(c.receipt)
+dict_json ={}
+for i in r._total_sales:
+    cart = [p for p in c.shopping_list]
+    dict_json[i] = {"customer:" :i , "cart :": cart  , "total :" :r.profit_amount}
+    
+with open("items.json", "w") as outfile:
+    json.dump(dict_json, outfile)
 
