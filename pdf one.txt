@@ -1,0 +1,9 @@
+1. NO-SQL it is DB how is not work with table
+2. is very flex  you can type what you wont , you can add data without scema,and is "free"
+is not organized with a lot of data, you can not make join and complex sheilta, and a lot of web use SQL
+
+3.database is database collections- is like the table but here is this"{}" and what inside is the documents
+and is look like this {documents , documents } and is bson and the id key is the primary key
+and the field is key - value like we know 
+
+4. you need the id be uniq and if you dont put id is make auto
