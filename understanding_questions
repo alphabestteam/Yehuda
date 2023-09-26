@@ -1,0 +1,49 @@
+
+
+bootstrap - is library of css that ready to use 
+
+
+1. one block elements start new line and cover all the space they can and they have top and bottom margins 
+examples - <div> , <hr>
+ iniline elements the never start from new line they cover the space in the html the not have top and bottom margins
+ examples - <span> , <br>
+
+2.doctype is the first line in HTML is tall to the browser what version HTML the page
+
+3. we have box margin inside we have border and inside we have padding an the content is look like that [marg[border[padding[content]]]]
+ padding give gap around the the content and margin is give gaps out side the border so if you hav div of elements so padding is do gap inside the div is move the elements 
+ and margin is gap all the div form anther div
+
+4. there are three principles is work with grid and fluid image and breakpoints
+
+5. we have absolute - cm =37.8 ,mm millimeters=1/10 of 1cm and 
+relative - em -font size of the father , rem - font size root element 
+
+6. we have five static , relative m absolute, fixed , sticky
+static - the position according th the flow of hte document 
+relative - same but he move according the the anther value and is not affect position of other element
+absolute -he position to the oldest father he think he the only one there
+fixed - he always stay in the same place even the page move 
+sticky - he go based the scroll position
+ 
+7.  justify-content - is let you the change the space in the container to do more space to move the the center to the end ,start ...
+ align-items - you can control them inside the container like stretch them in the same hight or center , up ,down
+ align-self -  This allows the default alignment to be overridden for individual flex items
+ align-content - he control on multi-line  and not one line
+ flex-grow -  is can give item to grow more then anther if he has value of 2 he take *2 place  
+ flex-wrap - all the item try to be in one line  and we can change that go to multiple line
+ .container {
+    justify-content: space-around ;
+    flex-wrap:  wrap 
+    flex-grow: 4;
+  }
+
+  8. id - is for single element , class is for group
+
+  9.dev is block-level , span is iniline
+
+  10. <nav> id define the navigation of document like nev bar 
+
+ 11. is insert content before the word  is the same gust insert in the end of the content
+
+ 12. in css is plain text in scss you have variables you can use  
