@@ -1,0 +1,150 @@
+body{
+    margin: 0;
+    height: 100%
+}
+span{
+    color: red;
+    text-decoration: line-through;
+}
+
+a{
+    text-decoration: none;
+    padding: 1em;
+    color: rgb(0, 0, 0);
+    
+}
+hr{
+    margin-bottom: 0.3%;
+}
+.nav-up{
+    background-color: bisque;
+    text-align: center;
+    margin: 0;
+    padding: 0.8em;
+}
+
+#logo{
+    width: 11em;
+    height: 0%;
+}
+.d-flex{
+    margin-left: auto;
+    margin-right: auto;
+}
+.button{
+    border-radius: 18px;
+    position: relative;
+    right: 4.7em;
+}
+.second-row {
+    text-align: center;
+        
+}
+.therd-row a{
+    padding : 0.1%;
+    margin-bottom:1.4% ;
+    bottom: 0.3%;
+}
+.carousel-item a {
+    padding: 0.0%;
+}
+.new-book{
+    margin-top:2em;
+    margin-bottom:5em ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.horizontal-scroll{
+    height: auto;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    margin-top:1em;
+    
+}
+.horizontal-scroll a{
+    padding: 0.5%;
+}
+.scale:hover{ 
+    transform: scale(1.01); 
+}
+.horizontal-scroll img {
+    border-radius: 8px;
+    width: 20%;
+    border-radius: px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.form-control{
+    width: 30em;
+    border-radius: 30px;
+    background-color: rgb(216, 216, 216);
+    
+} 
+.img-fluid{
+    margin-top: 50%;
+    width: 100;
+}
+.card{
+    border: none;
+}
+.one .card{
+    border-bottom: 1px solid rgb(220, 220, 220);
+    margin: 5px;
+}
+.line:hover{
+    border-bottom: 3px solid rgb(46, 0, 133);
+    
+}
+.sing-up{
+    background-color:#ffeee6;
+    padding: 3em;
+}
+.center{
+    display:table-row;
+    display : flex;
+    text-align: center;
+    
+}
+.c{   
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.center .btn{
+    /* margin-left: 5em ; */
+    border-radius: 18px;
+    margin-top: 1em ;
+    width: 25%;
+    background-color:#573ba3 ;
+}
+.footer{
+    background-color: #2d214f;
+}
+ul {
+    
+    list-style-type: none;
+    
+}
+ul a{
+    color: white;
+}
+li{
+    margin: 0.5em;
+
+}
+#neutral{
+    width: 70%;
+}
+.col{
+    color: white;
+    margin-top: 2em;
+}
+.under-footer span,.under-footer a{
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    padding-left: 10px;
+}
