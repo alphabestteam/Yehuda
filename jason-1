@@ -1,0 +1,19 @@
+1. is a format to pass data with key - value like dict in python
+
+2. is what in the curly braces and key-value like name -"yoda" , age :22 .. is contin string ,number , object ,arr,bool,null javascript make that to object
+
+3. class , struct ,dict,map 
+
+4. array ,list , tuple
+
+5. string ,number , object ,arr,bool,null
+
+6. string ,number , object ,arr,bool,null
+
+7. number , null ,bool
+
+8. the minimum is empty string ("")
+
+9. key are reference to the data for example key 'name' is refer to the name : yoda  
+
+10. the key value true and false represent it self
