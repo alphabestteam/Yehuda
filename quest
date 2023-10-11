@@ -1,0 +1,35 @@
+1. is a new version (task force) of http more faster 
+
+2. Everyone uses the Internet so we need roles those role call protocol so protocol communication is set of roles the communicate in the web
+
+3. it is document how is contain note about computer network
+
+4. HyperText Transfer Protocol is help to load web page , stream videos , fetch data 
+
+
+5. http is not use secure protocol and he use tcp. in https is more secure because we use TLS or ssl to encryption data and he use also tcp 
+
+6. we have client how send to the server for web page the server process the req and send back res with the req how ask for all this work on protocol tcp 
+
+7. user agent- is a HTTP request header his do to the user request to the web  and he provide info about 
+clint computer 
+web server -  is a server content to client and he lisen to http/s req and return res 
+Proxies-  act as intermediaries between clients and web servers
+
+8. act as intermediaries between clients and web servers the like filter and is improve privacy load balancing, caching they work by relaying traffic between clients and server and they work for specific goals like filtering ..
+
+9. stat is mean they remember info about communication or interaction 
+
+10. HTTP protocol is stateless so no 
+
+11. the server processing the req and generating a res, and the res being sent back to the client 
+
+12. provide information about the client and its preferences to the web server
+
+13. it small data that websites store in our computer to remember thing like password and your login and your preference 
+
+14. HTTP request include , url,and protocol version headers for additional information, and an optional body for data his is how a client communicates with a server
+
+15. HTTP response message, headers for additional information, and an optional body containing the response content. This is how a server communicate
+
+16. protocol HTTP/3 uses QUIC faster and more reliable protocol while HTTP/2 use TCP
