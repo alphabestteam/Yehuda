@@ -1,0 +1,50 @@
+1.  model.py is the file how define objects in db table
+
+2.  views.py is functions that handles the client requests
+
+3.  url.py map th urls to the view function
+
+4.  is the way to make changes in the models add field deleting .. into the database 
+we change the to the django model 
+then create migration we use this commend python manage.py makemigrations
+this commend analyze the changes and create new migration 
+to apply we use this commend python manage.py migrate and we done 
+
+5. serializer is converting objects to javascript data and frameworkes 
+
+6. is a toolkit the reduces the code you need to write to create  rest 
+
+7. there is no file
+
+8. one to one - each record in one model is associated with one record in another model
+   many to one - many records in one model can be associated with one record in another model
+   many to many - many records in one model can be associated with many records in another model
+
+9. 1 we use this commend in the terminal python manage.py startapp name 
+   2 make model in the model.py
+   3 go to setting.py to installed_app and add the new app we made 
+   4 make new migrate for the database 
+   5 and now add this file to the admin.py  and we  done 
+
+10. 1 we get the post req with url in http method and the data we need 
+    2 we check the user authorization  
+    3 we anlaze the data and converting to the format how fit for the process 
+    4 we do what the user ask (update database ect )
+    5 we sand response to the web with what we do 
+
+11. middleware is software between the web and the server and is add feature like login security without to change the core code and is often use in http req 
+
+12. is structured data files (like xml and json) 
+    to load use this commend - python manage.py loaddata somedata.json
+    to create use this commend - python manage.py dumpdata myapp.ModelName --output=somedata.json
+
+13. filter() if you need to find something in the database you use filter for example -
+MyModel.objects.filter(product='product_name') i want to find some product i use that
+
+14. is class how let you to interact with the database every mode came with default manager .
+    objects - is primary manger is create for any model it provide func for querying  and manipulating database
+    _base_manager - is the base manager form he all the primary manger are derive he usually in the background helping  
+
+
+
+
