@@ -41,4 +41,13 @@
 21. json.load return py 
     jason.parse return javascript
 
-22. 
+22. Extensible Markup Language is bad because is very difficult  
+
+23. json is format that is readable by people and computer, json is not defend on one language,
+xml provides rules to define data 
+
+24.Data exchange with web services
+Configuration files in your applications
+Storing and transmitting structured data in a human-readable format
+
+25.
