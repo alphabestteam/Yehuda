@@ -11,10 +11,10 @@ def add_target(request):
             object_data = JSONParser().parse(request)
             data_deserialized = TargetSerializer(data= object_data)
             if data_deserialized.is_valid():
-                data_deserialized.save()
+                data_deserialized.create(object_data).save()
                 return HttpResponse("save successfully!" )
             else:
-                return HttpResponse("not well formed" )
+                return HttpResponse("not well formed " )
         else:
             return HttpResponse("not post")
    
