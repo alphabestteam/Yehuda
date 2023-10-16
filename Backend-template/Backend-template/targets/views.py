@@ -20,9 +20,22 @@ def add_target(request):
    
 
         
-# @csrf_exempt
-# def update_target(request):
-#     # Implement here an update function
+@csrf_exempt
+def update_target(request):
+    # Implement here an update function
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+        target = Target.objects.get(pk=data['target_id'])  
+        serializer = TargetSerializer(target, data=data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse("Target updated successfully!", safe= False)
+        else:
+            return HttpResponse("Invalid data", status=400)
+    else:
+        return JsonResponse("This endpoint only accepts POST requests", safe= False)
+   
 
 def all_targets(request):
     # Implement here a get all targets function
