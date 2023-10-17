@@ -5,6 +5,13 @@ from rest_framework.parsers import JSONParser
 from .models import Person
 from .serializers import PeopleSerializer
 
+
+@csrf_exempt
+def all_people(request):
+    people = Person.objects.all()
+    people_serialized = PeopleSerializer(people,many =True)
+    return JsonResponse(people_serialized.data , safe=False)
+
 @csrf_exempt
 def add_people(request):
     if request.method == 'POST':
@@ -37,7 +44,7 @@ def update_people(request):
 
         if serializer.is_valid():
             serializer.save()
-            return JsonResponse("Target updated successfully!", safe= False)
+            return JsonResponse("person updated successfully!", safe= False)
         else:
             return HttpResponse("Invalid data", status=400)
     else:
