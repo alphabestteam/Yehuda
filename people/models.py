@@ -6,3 +6,8 @@ class Person(models.Model):
     date_of_birth =models.DateField()
     hometown = models.CharField(max_length=50)
 # Create your models here.
+class Parent(Person):
+    work_space = models.CharField(max_length=50)
+    salary = models.DecimalField(decimal_places=2,max_digits=15)
+    child = models.ManyToManyField(Person, related_name= 'parents',default=[])
+    
