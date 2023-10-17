@@ -52,8 +52,8 @@ def update_people(request):
             return JsonResponse ("the target do not exist !" , status = 404)
         serializer = PeopleSerializer(target, data=data)
 
-        if serializer.is_valid():
-            serializer.update()
+        if serializer.is_valid(): 
+            serializer.update(target,data)
             return JsonResponse("person updated successfully!", safe= False , status=200 )
         else:
             return HttpResponse("Invalid data", status=400)
