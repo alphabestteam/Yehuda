@@ -220,12 +220,13 @@ def find_Siblings(request , id):
 
         siblings = Person.objects.filter(parents__in=person.parents.all())
         sibling_serialized = PeopleSerializer(siblings, many=True).data
+        
 
         return JsonResponse(sibling_serialized, safe=False, status=200)
     else:
         return HttpResponse("You need to use the GET method", status=405)
     
-        
+
 
     
 # Create your views here.
