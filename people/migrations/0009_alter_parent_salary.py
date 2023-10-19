@@ -18,6 +18,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.RunPython(round_convert_to_int),
         migrations.AlterField(
             model_name='parent',
             name='salary',
