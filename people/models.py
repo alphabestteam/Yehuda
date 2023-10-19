@@ -8,6 +8,6 @@ class Person(models.Model):
 # Create your models here.
 class Parent(Person):
     work_space = models.CharField(max_length=50)
-    salary = models.DecimalField(decimal_places=2,max_digits=15)
+    salary = models.IntegerField()
     child = models.ManyToManyField(Person, related_name= 'parents',default=[])
     
