@@ -82,7 +82,7 @@ def del_parent(request,id):
         try:
             instance = Parent.objects.get(id=id)
             instance.delete()
-            return HttpResponse("the object del", status=202)
+            return HttpResponse("the object del", status=204)
         except:
             return HttpResponse("the object is not exist", status=404)
     else:
@@ -95,7 +95,7 @@ def update_parent(request):
     if request.method == 'PUT':
         data = JSONParser().parse(request)
         try:
-            parent = Parent.objects.get(pk=data['id'])  
+            parent = Parent.objects.get(id=data['id'])  
         except Parent.DoesNotExist:
             return JsonResponse ("the parent do not exist !" , status = 404)
         serializer = parentSerializer(parent, data=data)
@@ -156,7 +156,7 @@ def rich_kid(request):
         except Parent.DoesNotExist:
             return JsonResponse("No parents with a salary greater than 40 found", safe=False, status=404)
             
-        children = Person.objects.filter(child__in=parent, date_of_birth__gt='2005-01-01')
+        children = Person.objects.filter(parents__in=parent, date_of_birth__gt='2005-01-01')
         child_serialized = []
         
         for child in children:   
