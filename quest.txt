@@ -1,0 +1,17 @@
+1. web app it is program that build in model clint-server is often use white browsers as clint like google calendar
+
+2. is http sever that is program how calling http protocol to send files and html page picture and anther files
+
+3. send files and html page picture and anther files is good together web server and web app it ez for dynamic web page
+
+4. java servlet  is Based server-side technology is allow you to set how the server respond to requests from the client 
+
+5.  is a web sever is open source and work with java code there are three component:
+Catalina- its a web container
+Coyote -  is handel http protocol he listen to connections in port TCP and pass the req to the engine tomcat and send back to the clint
+Jasper - he to parsing on JSP files and turns them into Java code for Catalina component and he can do at running time
+
+6.  advantages : 
+1 - it easy to use and set up and is good for quick development 
+    disadvantages:
+1-limited functionality , and is mainly for java app 2- is not so good security because is open source  
