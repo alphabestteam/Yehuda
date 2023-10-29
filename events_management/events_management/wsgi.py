@@ -1,5 +1,5 @@
 """
-WSGI config for mange_events project.
+WSGI config for events_management project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mange_events.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'events_management.settings')
 
 application = get_wsgi_application()
