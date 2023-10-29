@@ -82,7 +82,6 @@ def event_file_find(request,pk):
 
 ######################################### chat event ###############################################
 
-
 @api_view(['GET'])
 def event_chat_list(request):
     events = Event_chat.objects.all()

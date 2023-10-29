@@ -13,4 +13,10 @@ urlpatterns = [
     path('file/delete/<int:pk>/', views.event_file_del, name='event-file-delete'),
     path('file/update/<int:pk>/', views.event_file_up, name='event-file-update'),
     path('file/find/<int:pk>/', views.event_file_find, name='event-file-detail'),
+    
+    path('chat/all/', views.event_chat_list, name='event-file-list'),
+    path('chat/add/', views.event_chat_add, name='event-file-add'),
+    path('chat/delete/<int:pk>/', views.event_chat_del, name='event-file-delete'),
+    path('chat/update/<int:pk>/', views.event_chat_up, name='event-file-update'),
+    path('chat/find/<int:pk>/', views.event_chat_find, name='event-file-detail'),
 ]

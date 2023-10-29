@@ -23,8 +23,5 @@ class Event_file(Event):
     uploader = models.ForeignKey(User, on_delete=models.CASCADE)
     file = models.FileField(upload_to="uploads/",blank=True,null=True ,default="")
     
-class Event_chat(Event):
-    text = models.TextField()
-    date_sent = models.DateTimeField(auto_now_add=True)
+class Event_chat(Event): 
     chat = models.ForeignKey(Chat, on_delete=models.CASCADE)
-    sender = models.ForeignKey(User, on_delete=models.CASCADE)
