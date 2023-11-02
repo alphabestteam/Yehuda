@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function evalNumbers(number1,number2,aithmetic){
+            switch (aithmetic) {
+                case "add":
+                    return `${aithmetic} of ${number1} and ${number2} is ${number1+number2} `;
+                case "subtract":
+                    return `${aithmetic} of ${number1} and ${number2} is ${number1-number2} `;
+                case "multiply":
+                    return `${aithmetic} of ${number1} and ${number2} is ${number1*number2} `;
+                case "divide":
+                    return `${aithmetic} of ${number1} and ${number2} is ${number1/number2} `;
+                case "modulus":
+                    return `${aithmetic} of ${number1} and ${number2} is ${number1%number2} `;
+        
+                default:
+                    console.log("is not a valid aithmetic ");
+                    break;
+            }
+        }
+        alert(evalNumbers(2,4,"modulus"))
+    </script>
+    
+</body>
+</html>
