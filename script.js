@@ -23,7 +23,7 @@ async function getText(file) {
   const listMwnu = document.createElement("div");
   document.querySelector("div").innerHTML = "";
 
-  Object.entries(objMenu.items).map((entry) => {
+  Object.entries(objMenu.items).map((entry) => { //first part. take data form the server  and put in the website
     let value = entry[1];
     const div = document.createElement("div");
     const hederPlusPrice = document.createElement("h3");
@@ -51,7 +51,8 @@ async function getText(file) {
     listMwnu.appendChild(div);
     div.classList.add("order-summary");
     console.log(value.name);
-  });
+  }); /////////////////////////////////////////////////////////////////////////////////////////////////////
+
   document.querySelector("div").append(listMwnu);
   AllInput = document.querySelectorAll("input");
   console.log(AllInput);
@@ -67,44 +68,16 @@ async function getText(file) {
       if (input.value > 1 || input.value < 6) {
         if (input.id == 1) {
           krabbyPattytotal = 3.88 * input.value;
-          KrabbyPatty.innerHTML =
-            "Krabby Patty (" +
-            input.value +
-            " x " +
-            3.88 +
-            " = " +
-            3.88 * input.value +
-            "$)";
+          KrabbyPatty.innerHTML = "Krabby Patty (" + input.value + " x " + 3.88 + " = " + 3.88 * input.value + "$)";
         } else if (input.id == 2) {
           krustyKrabPizzatotal = 5.55 * input.value;
-          KrustyKrabPizza.innerHTML =
-            "Krusty Krab Pizza (" +
-            input.value +
-            " x " +
-            5.55 +
-            " = " +
-            5.55 * input.value +
-            "$)";
+          KrustyKrabPizza.innerHTML = "Krusty Krab Pizza (" + input.value + " x " + 5.55 + " = " + 5.55 * input.value + "$)";
         } else if (input.id == 3) {
           ChumBurgertotal = 2.97 * input.value;
-          ChumBurger.innerHTML =
-            "Chum Burger (" +
-            input.value +
-            " x " +
-            2.97 +
-            " = " +
-            2.97 * input.value +
-            "$)";
+          ChumBurger.innerHTML = "Chum Burger (" + input.value + " x " + 2.97 + " = " + 2.97 * input.value + "$)";
         } else if (input.id == 4) {
           KelpFriestotal = 1.01 * input.value;
-          KelpFries.innerHTML =
-            "Kelp Fries (" +
-            input.value +
-            " x " +
-            1.01 +
-            " = " +
-            1.01 * input.value +
-            "$)";
+          KelpFries.innerHTML = "Kelp Fries (" + input.value + " x " + 1.01 + " = " + 1.01 * input.value + "$)";
         }
       }
       if (input.value == 0) {
@@ -119,33 +92,27 @@ async function getText(file) {
         }
       }
     });
-  });
+  });/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   submitOrder = document.getElementById("submit-button");
   submitOrder.addEventListener("click", function () {
-    datajson = {
-      "Chum Burger": ChumBurgertotal,
-      "Kelp Fries": KelpFriestotal,
-      "Krabby Patty": krabbyPattytotal,
-      "Krusty Krab Pizza": krustyKrabPizzatotal,
-    };
 
-    fetch("http://localhost:8000/orders", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify(objMenu),
-    })
-      .then(function (res) {
-        alert(res);
-      })
-      .catch(function (res) {
-        alert(res);
-      });
+    fetch('http://localhost:8000/orders', { ///// send to the sever json i can't make to json
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify()
+})
+   .then(response => response.json())
+   .then(response => console.log(JSON.stringify(response)))
+
   });
 }
-getText("http://localhost:8000/menu").then(console.log("finsh"));
+getText("http://localhost:8000/menu")
+  .then(console.log("finsh"));
 
 p = document.querySelector("p");
 
@@ -160,4 +127,4 @@ p.appendChild(ChumBurger);
 p.appendChild(KelpFries);
 
 let AllInput;
-console.log(AllInput);
+
