@@ -1,3 +1,7 @@
+SpongeBobFlaskServer/venv
+SpongeBobFlaskServer/__pycache__
+.idea
+*.pyc
 # Byte-compiled / optimized / DLL files
 _pycache_/
 *.py[cod]
