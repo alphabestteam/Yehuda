@@ -1,0 +1,17 @@
+<mat-form-field   >
+    <mat-label>Select an option</mat-label>
+    <mat-select  [(value)]="selected" >
+      <mat-option (click)="addNewItem(selected)" value=1> 1</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=2> 2</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=3> 3</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=4> 4</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=5> 5</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=6> 6</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=7> 7</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=8> 8</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=9> 9</mat-option>
+      <mat-option (click)="addNewItem(selected)" value=10>10</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <p>You selected: {{selected}}</p>
