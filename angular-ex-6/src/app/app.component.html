@@ -1,0 +1,93 @@
+<h1>Form Builder, Form Group, Form Control, Validators and ngsubmit</h1>
+
+<form class="form" [formGroup]="profileForm">
+  <div class="field">
+    <label class="label">username</label>
+    <input
+      id="name"
+      type="text"
+      class="input"
+      formControlName="name"
+      (click)="submit = false"
+      [class.invalid]="
+        profileForm.get('name')?.invalid &&
+        (profileForm.get('name')?.dirty || profileForm.get('name')?.touched)
+      "
+    />
+    <div
+      *ngIf="
+        profileForm.get('name')?.invalid &&
+        (profileForm.get('name')?.dirty || profileForm.get('name')?.touched)
+      "
+      class="error"
+    >
+      enter username
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">email</label>
+    <input
+      type="text"
+      class="input"
+      formControlName="email"
+      (click)="submit = false"
+      [class.invalid]="
+        profileForm.get('email')?.invalid &&
+        (profileForm.get('email')?.dirty || profileForm.get('email')?.touched)
+      "
+    />
+    <div
+      *ngIf="
+        profileForm.get('email')?.invalid &&
+        (profileForm.get('email')?.dirty || profileForm.get('email')?.touched)
+      "
+      class="error"
+    >
+      enter email
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">password</label>
+    <input
+      type="text"
+      class="input"
+      formControlName="password"
+      (click)="submit = false"
+      [class.invalid]="
+        profileForm.get('password')?.invalid &&
+        (profileForm.get('password')?.dirty ||
+          profileForm.get('password')?.touched)
+      "
+    />
+
+    <div
+      *ngIf="
+        profileForm.get('password')?.invalid &&
+        (profileForm.get('password')?.dirty ||
+          profileForm.get('password')?.touched)
+      "
+      class="error"
+    >
+      enter password
+    </div>
+  </div>
+
+  <div>
+    <button
+      type="submit"
+      class="button"
+      [disabled]="!profileForm.valid"
+      (click)="submit = true"
+    >
+      Register
+    </button>
+  </div>
+</form>
+
+<div *ngIf="submit">
+  <h3>Details:</h3>
+  <p>{{ profileForm.value.name }}</p>
+  <p>{{ profileForm.value.email }}</p>
+  <p>{{ profileForm.value.password }}</p>
+  <p>{{ profileForm.status }}</p>
+</div>
