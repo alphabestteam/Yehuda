@@ -1,0 +1,16 @@
+docker pull tomcat 
+
+docker run -d --name tomcat -p 8080:8080 tomcat
+
+docker exec -it tomcat /bin/bash
+
+mv webapps webapps2
+
+mv webapps.dist/ webapps
+
+exit
+
+---------------dockerfile---------
+
+docker build -t tomcat . 
+docker run -d --name tomcat -p 8080:8080 tomcat
