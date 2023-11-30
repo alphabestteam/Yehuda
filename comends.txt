@@ -1,0 +1,19 @@
+services - is all the up inside like sql , front , back ....
+
+image - some:latest give you the latest version of some
+
+container_name - container name
+
+environment - here i defining variables like we do with MONGO_INITDB_ROOT_USERNAME and MONGO_INITDB_ROOT_PASSWORD
+
+ports - give access to the app 
+
+volumes - is save all the data when you close container 
+
+2. the problem is there is no port in mongo-experss
+
+# docker compose up  
+# docker compose down
+
+
+3 we use .env for the variables
