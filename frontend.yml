@@ -15,3 +15,5 @@ spec:
       containers:
       - name: frontend-container
         image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend
+        port: 
+        - containerPort: 3001
