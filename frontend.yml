@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: frontend-container
-        image: ghcr.io/expruc/kubernetes-graduation-drill/k8s-final-drill:frontend
+        image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend  
         ports:
         - containerPort: 80  
         env:
+         - name: PORT
+            value: "80" 
         - name: BACKENDURL
           value: "http://backend-service:8080" 
