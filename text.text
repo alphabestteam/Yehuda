@@ -1,2 +1,2 @@
 you can do it with 
-kubectl create deployment
+kubectl create namespace namespace
