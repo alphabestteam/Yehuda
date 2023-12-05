@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-deployment
+  namespace: my-namespace
 spec:
   replicas: 1
   selector:
@@ -15,6 +16,13 @@ spec:
       containers:
         - name: backend-container
           image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:backend
+           resources:
+              requests:
+                memory: "100Mi"
+                cpu: 500m
+              limits:
+                cpu: "1"
+                memory: "200Mi"
           ports:
             - containerPort: 8080
           env:
