@@ -16,15 +16,27 @@ spec:
       containers:
         - name: backend-container
           image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:backend
-           resources:
-              requests:
-                memory: "100Mi"
-                cpu: 500m
-              limits:
-                cpu: "1"
-                memory: "200Mi"
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: 500m
+            limits:
+              cpu: "1"
+              memory: "200Mi"
+          readinessProbe:
+            tcpSocket:
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
           ports:
             - containerPort: 8080
           env:
             - name: PORT
               value: "8080"
+
+
+
+
+
+
+             

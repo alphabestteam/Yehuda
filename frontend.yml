@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,10 +17,31 @@ spec:
       containers:
       - name: frontend-container
         image: ghcr.io/expruc/kubernetes-gradutaion-drill/k8s-final-drill:frontend
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: 500m
+          limits:
+            cpu: "1"
+            memory: "200Mi"
+        readinessProbe:
+          tcpSocket:
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
         ports:
         - containerPort: 80  
-        envForm:
-        - configMapRef: 
-          name: front-config
-        - secretRef:  
-          name: secret
+        env:
+        - name: FRONT_CONFIG
+          valueFrom:
+            configMapKeyRef:
+              name: front-config
+        - name: SECRET
+          valueFrom:
+            secretKeyRef:
+              name: secret
+
+
+
+
+

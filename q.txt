@@ -1,1 +1,5 @@
-i can see kind of how match memory and cpu they need so i give more if there are workload they have spere
+1 is health check that check if a container is ready, is check the state of a container if is ready to sand,so that help to kubernetes to mange 
+by get only health container
+
+2 so that can lead to container are not ready to sand un health container
+
