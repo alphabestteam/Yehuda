@@ -1,0 +1,3 @@
+1. kubectl scale deployment "deployment" --replicas=5
+2. kubectl scale deployment frontend-deployment --replicas=5
+3 When we have a lot of users or a few users it creates a load on the servers so we need to add or remove a pod
